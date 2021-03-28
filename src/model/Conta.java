@@ -1,6 +1,6 @@
 package model;
 
-public class Conta {
+public abstract class Conta {
 	private String nome;
 	private int numeroConta;
 	private String agencia;
@@ -45,18 +45,8 @@ public class Conta {
 		}
 		
 		//Criando Verificações
-		boolean sacar(double valor) {
-			if (valor > this.saldo) {
-				System.err.println("Saldo insuficiente");
-				this.saldoOk = false;
-				return saldoOk;
-
-			} else {
-				this.saldo = saldo - valor;
-				saldoOk = true;
-				return saldoOk;
-			}
-		}
+		abstract boolean sacar(double valor);
+			
 		
 		public void depositar(double valor) {
 			saldo = saldo + valor;

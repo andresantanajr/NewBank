@@ -5,7 +5,6 @@ public abstract class Conta {
 	private int numeroConta;
 	private String agencia;
 	private double saldo;
-	private boolean saldoOk;
 	private boolean contaAtiva = false;
 	
 	

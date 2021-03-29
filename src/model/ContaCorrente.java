@@ -10,6 +10,11 @@ public class ContaCorrente extends Conta{
 			return true;
 		}
 		
+		public void totalDescontoCorrente() {
+			if(this.getContaAtiva()) {
+				this.getDesconto();
+			}
+		}
 	
 		public void exibirDados() {
 			System.out.println("Olá, Seja bem-vindo ao MainBank!");
